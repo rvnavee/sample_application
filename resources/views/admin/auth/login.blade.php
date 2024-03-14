@@ -1,40 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <link rel="stylesheet" href="{{ asset('auth/css/auth.css') }}">
-</head>
-
-<body class="align">
+@extends('admin.auth.layout')
+@section('page-title', '| Admin Login')
+@section('auth-content')
     <div class="grid">
         <form action="" method="POST" class="form login">
-            <div class="form__field">
-                <label for="login__username">
-                    <svg class="icon">
-                        <use xlink:href="#icon-user"></use>
-                    </svg>
+            <div class="form_field">
+                <label for="login_username">
+                    <svg class="icon"><use xlink:href="#icon-user"></use></svg>
                     <span class="hidden">Email / Phone Number</span>
                 </label>
-                <input autocomplete="off" id="login__username" type="text" name="username" class="form__input" placeholder="Email / Phone Number" required>
+                <input autocomplete="off" id="login_username" type="text" name="username" class="form_input" placeholder="Email / Phone Number" required>
             </div>
 
-            <div class="form__field">
-                <label for="login__password">
-                    <svg class="icon">
-                        <use xlink:href="#icon-lock"></use>
-                    </svg>
+            <div class="form_field">
+                <label for="login_password">
+                    <svg class="icon"><use xlink:href="#icon-lock"></use></svg>
                     <span class="hidden">Password</span>
                 </label>
-                <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
+                <input id="login_password" type="password" name="password" class="form_input" placeholder="Password" required>
             </div>
 
-            <div class="form__field">
+            <div class="form_field">
                 <input type="submit" value="Sign In">
             </div>
 
         </form>
 
-        <p class="text--center">Forgot Password? <a href="#">Click Here</a></p>
+        <p class="text-center">Forgot Password? <a href="{{ route('admin.reset.password') }}">Click Here</a></p>
 
     </div>
 
@@ -46,6 +37,4 @@
             <path d="M1600 1405q0 120-73 189.5t-194 69.5H459q-121 0-194-69.5T192 1405q0-53 3.5-103.5t14-109T236 1084t43-97.5 62-81 85.5-53.5T538 832q9 0 42 21.5t74.5 48 108 48T896 971t133.5-21.5 108-48 74.5-48 42-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zm-320-893q0 159-112.5 271.5T896 896 624.5 783.5 512 512t112.5-271.5T896 128t271.5 112.5T1280 512z" />
         </symbol>
     </svg>
-</body>
-
-</html>
+@endsection

@@ -38,12 +38,23 @@ body {
     font-weight: var(--bodyFontWeight);
     line-height: var(--bodyLineHeight);
     margin: 0;
-    min-block-size: 100vh;
+}
+
+a {
+    color: var(--anchorColor);
+    outline: 0;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    text-decoration: underline;
 }
 
 .align {
     display: grid;
     place-items: center;
+    min-block-size: 100vh;
 }
 
 .grid {
@@ -75,20 +86,6 @@ body {
     vertical-align: middle;
 }
 
-
-a {
-    color: var(--anchorColor);
-    outline: 0;
-    text-decoration: none;
-}
-
-a:focus,
-a:hover {
-    text-decoration: underline;
-}
-
-
-
 input {
     background-image: none;
     border: 0;
@@ -115,11 +112,11 @@ input[type="submit"] {
     inline-size: 100%;
 }
 
-.form__field {
+.form_field {
     display: flex;
 }
 
-.form__input {
+.form_input {
     flex: 1;
 }
 
@@ -167,7 +164,6 @@ input[type="submit"] {
 .login input[type="submit"]:hover {
     background-color: var(--loginSubmitHoverBackgroundColor);
 }
-
 
 p {
     margin-block: 1.5rem;

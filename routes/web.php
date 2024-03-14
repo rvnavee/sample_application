@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Route::prefix('admin')->group(function () {
     Route::get('/', 'Admin\AuthController@login');
+    Route::get('/reset-password', 'Admin\AuthController@resetPassword')->name('admin.reset.password');
 });
